@@ -13,8 +13,9 @@
   </head>
 
   <body>
-    <div class="navbar border-bottom ms-2">
+    <div class="navbar border-bottom ms-2 me-2">
       <h3>Simple Airbnb</h3>
+      <%= link_to "Add a flat", new_flat_path, class: "btn btn-primary ms-3" %>
     </div>
     <%= yield %>
   </body>
