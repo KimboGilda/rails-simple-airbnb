@@ -1,15 +1,18 @@
 <div class="container m-4">
-<h1>All our flats (<%= @flats.length %>)</h1>
-<div class="flats border">
- <ul>
-<% @flats.each do |f| %>
-<h3><%= f.name %></h3>
-<p><%= f.address %></p>
-<p><i class="fa-solid fa-people-group"></i> <%= f.number_of_guests %> <i class="fa-solid fa-euro-sign"></i> <%= f.price_per_night %> </p>
- <% end %>
- </ul>
+  <h1>All our flats (<%= @flats.length %>)</h1>
+    <% @flats.each do |f| %>
+      <%= link_to flat_path(f) do %>
+      <h3><%= f.name %></h3>
+      <p><%= f.address %></p>
+      <p>
+       <i class="fa-solid fa-people-group"></i> <%= f.number_of_guests %> 
+       <i class="fa-solid fa-euro-sign"></i> <%= f.price_per_night %> 
+      </p>
+      <% end %>
+   <% end %> 
+  </div>
 </div>
-</div>
+
 
 
 <%# 
